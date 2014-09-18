@@ -1,0 +1,4 @@
+Map: <linenumber, lineinput> -> List <pointofint, 1>
+
+
+Reduce: List<pointofint, subsum> -> <pointofint, sum>

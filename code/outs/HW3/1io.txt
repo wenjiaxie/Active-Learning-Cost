@@ -1,0 +1,7 @@
+Map: <linenumber, lineinput> -> List <UID1, 1>
+
+
+
+Reduce: List<UID1, subsum(something like that)> -> <UID1, sum>
+
+

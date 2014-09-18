@@ -1,0 +1,146 @@
+
+CREATE TABLE UserInfo
+(
+    Email char(30) not null,
+    Birthdate date,
+    Fname char(20),
+    Lname char(20),
+    State char(20),
+    Country char(20),
+    City char(20),
+    BIRTHMONTH char(5),
+    Age number(3),
+    primary key(Email)
+    );
+ 
+
+create table Address
+(
+    AID number(2) not null,
+    City CHAR(20),
+    Zip CHAR(15),
+    StreetNumber number(5),
+    StreetAddress CHAR(50),
+    Longitude number(4,3),
+    latitiude number(4,3),
+    state char(30),
+    primary key (AID)
+);
+
+create table Checkin
+(
+   Ptitle char(100) not null,
+   Email char(30)  not null,
+   Checkdate date  not null,
+   primary key(Ptitle,Email,Checkdate),
+   foreign key(Email) references UserInfo on delete cascade,
+   foreign key(Ptitle) references Place on delete cascade
+);
+
+create table Event
+(
+    Starttime date not null,
+    AID number(2),
+    Description char(30) not null,
+    Etitle char(100) not null,
+    duration char(15),
+    primary key(Etitle),
+    foreign key (AID) references Address
+);
+
+create table invited
+(
+  Etitle char(100) not null,
+  Email char(30) not null,
+  state char(12),
+  primary key(Etitle,Email),
+  foreign key(Etitle) references Event on delete cascade,
+  foreign key(Email) references UserInfo on delete cascade
+);
+
+create table Friendship
+(
+  User1 char(30) not null,
+  User2 char(30) not null,
+  Type char(20),
+  primary key (User1,User2),
+  foreign key (User1) references UserInfo on delete cascade,
+  foreign key (User2) references UserInfo on delete cascade
+);
+
+create table Page
+(
+  Ptitle char(100) not null,
+  TType char(6),
+  primary key(Ptitle)
+);
+
+create table Place
+(
+    AID number(2),
+    Ptitle char(100) not null,
+    cate char(6),
+    primary key (Ptitle),
+   foreign key (Ptitle) references Page on delete cascade,
+   foreign key (AID) references Address
+);
+
+create table Post
+(
+    PID int not null,
+    Note char(160),
+    SEmail char(30),
+    REmail char(30),
+    Privacy int,
+    Datetime date,
+    primary key (PID),
+    foreign key (SEmail) references UserInfo on delete cascade,
+    foreign key (REmail) references UserInfo on delete cascade
+);
+
+create table postcomment
+(
+  PID int not null,
+  Email char(30) not null,
+  TEXT char(100),
+  datetime date,
+  primary key(PID,Email),--One User Can only comment on one post once(I cannot find a partial key to combine it with PID to form a primary key)
+  foreign key(PID) references Post on delete cascade,
+  foreign key(Email) references UserInfo on delete cascade
+);
+
+create table postlike
+(
+  PID int not null,
+  Email char(30) not null,
+  --TEXT char(100),
+  datetime date,
+  primary key(PID,Email),--One User Can only like one post once(I cannot find a partial key to combine it with PID to form a primary key)
+  foreign key(PID) references Post on delete cascade,
+  foreign key(Email) references UserInfo on delete cascade
+);
+
+create table Photo
+(
+  PID int not null,
+  PCODE int not null,
+  --TEXT char(100),
+  datetime date,
+  Ptitle char(100),
+  primary key(PID,PCODE),
+  foreign key(PID) references Post on delete cascade,
+  foreign key(Ptitle) references Place on delete cascade
+  --foreign key(Email) references UserInfo on delete cascade
+);
+
+
+create table Watched
+(
+  MID char(30) not null,
+  Email char(30),
+  --TEXT char(100),
+  Rating number(1),
+  primary key(MID,Email),
+  foreign key(MID) references Page on delete cascade,
+  foreign key(Email) references UserInfo on delete cascade
+);

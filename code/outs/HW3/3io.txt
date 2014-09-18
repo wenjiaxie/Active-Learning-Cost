@@ -1,0 +1,4 @@
+Map: <<linenumber, lineinput>> -> List <group, 1>
+
+
+Reduce: List<group, subsum> -> <group, sum>

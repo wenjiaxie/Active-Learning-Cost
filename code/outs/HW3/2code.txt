@@ -1,0 +1,398 @@
+//-----------------------------------------------------------------------------
+//Point class
+//-----------------------------------------------------------------------------
+
+
+public class Point {
+	
+	double x;
+	
+	double y;
+	
+	String pointofint;
+	
+	//constructor
+	
+	public Point(double x,double y,String pointofint)
+	{
+		this.x = x;
+		
+		this.y = y;
+		
+		this.pointofint = pointofint;
+	}
+	
+	
+	public double getdistance()
+	{
+		
+		double dis = Math.sqrt((x - 0) * (x - 0) + (y - 0) * (y - 0));
+		
+		if(pointofint.equals("Aircraft"))
+		{
+			dis = Math.sqrt((x - 56) * (x - 56) + (y - 74) * (y - 74));
+		}
+		if(pointofint.equals("Art antique collecting"))
+		{
+			
+			double x1 = x - 93;
+			
+			double y1 = y - 39;
+			
+			dis = Math.sqrt(x1*x1 + y1*y1);
+		}
+		if(pointofint.equals("Astrology"))
+		{
+			double x1 = x - 60;
+			
+			double y1 = y - 1;
+			
+			dis = Math.sqrt(x1*x1 + y1*y1);
+		}
+		if(pointofint.equals("Baseball"))
+		{
+double x1 = x - 36;
+			
+			double y1 = y - 85;
+			
+			dis = Math.sqrt(x1*x1 + y1*y1);
+		}
+		if(pointofint.equals("Basketball"))
+		{
+double x1 = x - 60;
+			
+			double y1 = y - 49;
+			
+			dis = Math.sqrt(x1*x1 + y1*y1);
+		}
+		if(pointofint.equals("Bicycling"))
+		{
+double x1 = x - 82;
+			
+			double y1 = y - 59;
+			
+			dis = Math.sqrt(x1*x1 + y1*y1);
+		}
+		if(pointofint.equals("Boating sailing"))
+		{
+double x1 = x - 86;
+			
+			double y1 = y - 22;
+			
+			dis = Math.sqrt(x1*x1 + y1*y1);
+		}
+		if(pointofint.equals("Book reading"))
+		{
+double x1 = x - 31;
+			
+			double y1 = y - 23;
+			
+			dis = Math.sqrt(x1*x1 + y1*y1);
+		}
+		if(pointofint.equals("Camping hiking"))
+		{
+double x1 = x - 22;
+			
+			double y1 = y - 73;
+			
+			dis = Math.sqrt(x1*x1 + y1*y1);
+		}
+		if(pointofint.equals("Casino vacation"))
+		{
+double x1 = x - 34;
+			
+			double y1 = y - 25;
+			
+			dis = Math.sqrt(x1*x1 + y1*y1);
+		}
+		if(pointofint.equals("Clothing"))
+		{
+double x1 = x - 33;
+			
+			double y1 = y - 98;
+			
+			dis = Math.sqrt(x1*x1 + y1*y1);
+		}
+		if(pointofint.equals("Cooking"))
+		{
+double x1 = x - 33;
+			
+			double y1 = y - 78;
+			
+			dis = Math.sqrt(x1*x1 + y1*y1);
+		}
+		if(pointofint.equals("Cosmetics"))
+		{
+double x1 = x - 53;
+			
+			double y1 = y - 85;
+			
+			dis = Math.sqrt(x1*x1 + y1*y1);
+		}
+		if(pointofint.equals("Cruise vacation"))
+		{
+			double x1 = x - 79;
+			
+			double y1 = y - 50;
+			
+			dis = Math.sqrt(x1*x1 + y1*y1);
+		}
+		
+		if(pointofint.equals("Electronics"))
+		{
+			double x1 = x - 13;
+			
+			double y1 = y - 69;
+			
+			dis = Math.sqrt(x1*x1 + y1*y1);
+		}
+		
+		if(pointofint.equals("Fashion"))
+		{
+			double x1 = x - 48;
+			
+			double y1 = y - 79;
+			
+			dis = Math.sqrt(x1*x1 + y1*y1);
+		}
+		if(pointofint.equals("Fishing"))
+		{
+			double x1 = x - 88;
+			
+			double y1 = y - 33;
+			
+			dis = Math.sqrt(x1*x1 + y1*y1);
+		}
+		if(pointofint.equals("Fitness"))
+		{
+			double x1 = x - 4;
+			
+			double y1 = y - 22;
+			
+			dis = Math.sqrt(x1*x1 + y1*y1);
+		}
+		if(pointofint.equals("Football"))
+		{
+			double x1 = x - 90;
+			
+			double y1 = y - 32;
+			
+			dis = Math.sqrt(x1*x1 + y1*y1);
+		}
+		if(pointofint.equals("Golf"))
+		{
+			double x1 = x - 33;
+			
+			double y1 = y - 55;
+			
+			dis = Math.sqrt(x1*x1 + y1*y1);
+		}
+		if(pointofint.equals("History"))
+		{
+			double x1 = x - 32;
+			
+			double y1 = y - 70;
+			
+			dis = Math.sqrt(x1*x1 + y1*y1);
+		}
+		
+		if(pointofint.equals("Hockey"))
+		{
+			double x1 = x - 67;
+			
+			double y1 = y - 75;
+			
+			dis = Math.sqrt(x1*x1 + y1*y1);
+		}
+		if(pointofint.equals("Home furnishings"))
+		{
+			double x1 = x - 19;
+			
+			double y1 = y - 14;
+			
+			dis = Math.sqrt(x1*x1 + y1*y1);
+		}
+		if(pointofint.equals("Household pets"))
+		{
+			double x1 = x - 9;
+			
+			double y1 = y - 91;
+			
+			dis = Math.sqrt(x1*x1 + y1*y1);
+		}
+		if(pointofint.equals("Hunting"))
+		{
+			double x1 = x - 81;
+			
+			double y1 = y - 63;
+			
+			dis = Math.sqrt(x1*x1 + y1*y1);
+		}
+		
+		if(pointofint.equals("Jewelry"))
+		{
+			double x1 = x - 52;
+			
+			double y1 = y - 35;
+			
+			dis = Math.sqrt(x1*x1 + y1*y1);
+		}
+		
+		if(pointofint.equals("Scuba"))
+		{
+			double x1 = x - 9;
+			
+			double y1 = y - 56;
+			
+			dis = Math.sqrt(x1*x1 + y1*y1);
+		}
+		
+		if(pointofint.equals("Shoes"))
+		{
+			double x1 = x - 40;
+			
+			double y1 = y - 58;
+			
+			dis = Math.sqrt(x1*x1 + y1*y1);
+		}
+		
+		if(pointofint.equals("Swimming pool"))
+		{
+			double x1 = x - 41;
+			
+			double y1 = y - 14;
+			
+			dis = Math.sqrt(x1*x1 + y1*y1);
+		}
+		
+		if(pointofint.equals("Tennis"))
+		{
+			double x1 = x - 85;
+			
+			double y1 = y - 74;
+			
+			dis = Math.sqrt(x1*x1 + y1*y1);
+		}
+		
+		
+		return dis;
+	}
+	
+	
+
+}
+
+//-----------------------------------------------------------------------------
+//Map class
+//-----------------------------------------------------------------------------
+
+import java.io.IOException;
+import java.util.Arrays;
+import java.util.List;
+
+import org.apache.hadoop.io.IntWritable;
+import org.apache.hadoop.io.LongWritable;
+import org.apache.hadoop.io.Text;
+import org.apache.hadoop.mapreduce.Mapper;
+import org.apache.hadoop.mapreduce.Mapper.Context;
+
+public class Map extends Mapper<LongWritable, Text, Text, IntWritable> {
+    	private final static IntWritable one = new IntWritable(1);
+    	private Text word = new Text();
+        
+        public void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
+        	 String lineinput = value.toString();
+             String[] linArr = lineinput.split(",");
+            String pointofint = linArr[2];
+            double x = Integer.parseInt(linArr[3]);
+            double y = Integer.parseInt(linArr[4]);
+            
+            Point p = new Point(x,y,pointofint);
+            
+            double distance = p.getdistance();
+            
+            word.set(pointofint);
+            if (distance <= 5)
+            	context.write(word, one);
+        }
+    } 
+
+//-----------------------------------------------------------------------------
+//reduce class
+//-----------------------------------------------------------------------------
+
+import java.io.IOException;
+
+import org.apache.hadoop.io.IntWritable;
+import org.apache.hadoop.io.Text;
+import org.apache.hadoop.mapreduce.Reducer;
+import org.apache.hadoop.mapreduce.Reducer.Context;
+
+ public class Deduction extends Reducer<Text, IntWritable, Text, IntWritable> {
+        public void reduce(Text key, Iterable<IntWritable> values, Context context) {
+            int sum = 0;
+            for (IntWritable val : values) {
+            	sum += val.get();
+            }
+            try {
+				context.write(key, new IntWritable(sum));
+			} catch (IOException | InterruptedException e) {
+				// TODO Auto-generated catch block
+				System.out.println("context write failed");
+			}
+        }
+    }
+
+//-----------------------------------------------------------------------------
+//main class
+//-----------------------------------------------------------------------------
+
+
+
+import org.apache.hadoop.conf.Configuration;
+import org.apache.hadoop.fs.Path;
+import org.apache.hadoop.io.IntWritable;
+import org.apache.hadoop.io.Text;
+import org.apache.hadoop.mapreduce.Job;
+import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
+import org.apache.hadoop.mapreduce.lib.input.TextInputFormat;
+import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
+import org.apache.hadoop.mapreduce.lib.output.TextOutputFormat;
+
+public class HW3_Question3
+
+{
+
+ @SuppressWarnings("deprecation")
+public static void main(String[] args){
+	 
+	 try
+	 {
+	 
+        Configuration conf = new Configuration();
+ 
+        Job job = new Job(conf, "Question 2");
+        job.setJarByClass(HW3_Question3.class);
+        job.setOutputKeyClass(Text.class);
+        job.setOutputValueClass(IntWritable.class);
+ 
+        job.setMapperClass(Map.class);
+        job.setCombinerClass(Deduction.class);
+        job.setReducerClass(Deduction.class);
+ 
+        job.setInputFormatClass(TextInputFormat.class);
+        job.setOutputFormatClass(TextOutputFormat.class);
+ 
+        FileInputFormat.addInputPath(job, new Path(args[0]));
+        FileOutputFormat.setOutputPath(job, new Path(args[1]));
+ 
+        job.waitForCompletion(true);
+    
+ }
+	 catch(Exception e)
+	 {
+		 System.out.println("jar making failed");
+	 }
+ 
+}
+}
